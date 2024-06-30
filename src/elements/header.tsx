@@ -1,6 +1,7 @@
 'use client'
 import {useState} from 'react';
 import {theme} from "@/utils/theme";
+import {info} from "@/utils/info";
 
 const Header = () => {
 
@@ -23,10 +24,14 @@ const Header = () => {
                     <span className="text-xl font-bold">Tarwiiga</span>
                 </div>
                 <div className="hidden md:block">
-                    <button
-                        className={`bg-[${theme.light_green}] text-[${theme.dark_green}] border border-[${theme.dark_green}] px-4 py-2 rounded`}>Request
-                        Access
-                    </button>
+                    <a
+                        href={info.request_access_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`bg-[#CBFFD6] text-[#3A4B40] px-6 py-3 border border-[#3A4B40] rounded-md text-center transition duration-300`}
+                    >
+                        Request Access
+                    </a>
                 </div>
                 <div className="md:hidden">
                     <button
@@ -44,10 +49,14 @@ const Header = () => {
             </div>
             {isMenuOpen && (
                 <div className="md:hidden flex flex-col items-start space-y-4 mt-4">
-                    <button
-                        className={`bg-[${theme.light_green}] text-[${theme.dark_green}] border border-[${theme.dark_green}] px-4 py-2 rounded`}>Request
-                        Access
-                    </button>
+                    <a
+                        href={info.request_access_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`bg-[#CBFFD6] text-[#3A4B40] px-6 py-3 border border-[#3A4B40] rounded-md text-center transition duration-300`}
+                    >
+                        Request Access
+                    </a>
                 </div>
             )}
         </header>
