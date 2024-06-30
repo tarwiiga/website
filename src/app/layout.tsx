@@ -21,11 +21,11 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
             <link rel="icon" href="/favicon.ico" sizes="100x100"/>
         </head>
         <body className={noto_sans.className}>
-        <GoogleTagManager gtmId={`GTM-${process.env.GOOGLE_TAG_MANAGER}`} />
+        <GoogleTagManager gtmId={`GTM-TZC51Y9RMG`} />
         <Header/>
         {children}
         <Footer/>
-        <GoogleAnalytics gaId={`G-${process.env.GOOGLE_ANALYTICS}`} />
+        <GoogleAnalytics gaId={`G-PNL9WS34`} />
         </body>
         </html>
     );
