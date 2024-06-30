@@ -1,11 +1,13 @@
 import type {Metadata} from "next";
 import React from "react";
-import {Inter} from "next/font/google";
+import {Noto_Sans} from "next/font/google";
 import "../styles/globals.css";
 import Header from "@/elements/header";
 import Footer from "@/elements/footer";
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
-const inter = Inter({subsets: ["latin"]});
+
+const noto_sans = Noto_Sans({subsets: ["latin"]});
 
 export const metadata: Metadata = {
     title: "Tarwiiga",
@@ -18,10 +20,12 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
         <head>
             <link rel="icon" href="/favicon.ico" sizes="100x100"/>
         </head>
-        <body className={inter.className}>
+        <body className={noto_sans.className}>
+        <GoogleTagManager gtmId={`GTM-${process.env.GOOGLE_TAG_MANAGER}`} />
         <Header/>
         {children}
         <Footer/>
+        <GoogleAnalytics gaId={`G-${process.env.GOOGLE_ANALYTICS}`} />
         </body>
         </html>
     );

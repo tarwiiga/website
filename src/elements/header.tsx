@@ -2,6 +2,7 @@
 import {useState} from 'react';
 import {theme} from "@/utils/theme";
 import {info} from "@/utils/info";
+import {sendGAEvent} from "@next/third-parties/google";
 
 const Header = () => {
 
@@ -29,6 +30,7 @@ const Header = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`bg-[#CBFFD6] text-[#3A4B40] px-6 py-3 border border-[#3A4B40] rounded-md text-center transition duration-300`}
+                        onClick={() => sendGAEvent({ event: 'RequestAccessClicked', value: 'RequestAccessHeader' })}
                     >
                         Request Access
                     </a>
@@ -54,6 +56,7 @@ const Header = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`bg-[#CBFFD6] text-[#3A4B40] px-6 py-3 border border-[#3A4B40] rounded-md text-center transition duration-300`}
+                        onClick={() => sendGAEvent({ event: 'RequestAccessClicked', value: 'RequestAccessHeader' })}
                     >
                         Request Access
                     </a>
