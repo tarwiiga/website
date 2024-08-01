@@ -2,7 +2,6 @@ export type InfoType = {
     headline1: string
     headline2: string
     description1: string
-    description2: string
     request_access_url: string
     video_demo_url: string
     x_url: string
@@ -11,12 +10,11 @@ export type InfoType = {
 }
 
 export const info: InfoType = {
-    headline1: "Empowering Google Ads with LLMs and GenAI",
-    headline2: "Transform your Google Ads agency with AI",
-    description1: "From brainstorming ad ideas to generating complete campaigns.",
-    description2: "Accelerate your workflow to the maximum level.",
-    request_access_url: "https://forms.gle/DSHMinj9EcHBmjRP8",
-    video_demo_url: "https://www.youtube.com/watch?v=iskWq2eU7T0",
+    headline1: "Introducing Tarwiiga AI Audience Builder 🚀",
+    headline2: "Build Audiences at Scale for your Google Ads",
+    description1: "Reach and target your ideal customer based on relevant keywords, URLs and apps",
+    request_access_url: "https://forms.gle/1qqQZgEhdQ6jvmwH6",
+    video_demo_url: "https://www.youtube.com/watch?v=BxlOijzjZSk",
     x_url: "https://x.com/tarwiiga",
     linkedin_url: "https://linkedin.com/company/tarwiiga",
     youtube_url: "https://youtube.com/@tarwiiga",
